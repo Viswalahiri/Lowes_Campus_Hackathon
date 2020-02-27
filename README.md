@@ -108,9 +108,35 @@ Soon after this, the hash-table is pickled (saved), as ```product_synonym_hash.p
 
 This ensures that it can be used further on.
 
-**[This]()** python script handles the creation of the hash-table.
+**[This]()** python script handles the updation of the hash-table.
 
 The **update_hash_map()**  method was the responsible method.
+
+### Step 7 : Create mechanism to update db and update hash-table simultaneously
+
+A flask application **app.py**, was created, and a template inde.html is linked along with the database table **inventory.db**.
+
+A trigger is set, for updating hash-table with inputs, as soon as inputs are sent into db for insertion.
+
+**[This]()** python script is the Flask Web Application.
+
+The **update_db()**  method was the responsible method.
+
+**[This]()** python script contains the code responsible for triggering the updating of the hash table.
+
+The **dynamic_data_dump()**  method was the responsible method.
+
+### Step 8 : Create API around accessing hash-table and finding most similar products
+
+A REST-API is created around code that accepts a string or customer query and returns JSON for 2 of the most similar products.
+
+The 2 most similar products are found, and their corresponding asset_links, ratings, dummy prices, website links, and descriptions are generated in JSON.
+
+**[This]()** python script contains the code responsible for creating the API around processing the input and delivers JSON.
+
+The **general_search()**  method was the responsible method.
+
+### Step 9 : Ensure that Dialogflow bot has above API method present in Fulfillment, and data is recieved and displayed on iframe, or window.
 
 ## Prerequisites
 
