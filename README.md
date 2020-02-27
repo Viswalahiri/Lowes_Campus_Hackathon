@@ -38,19 +38,79 @@ These lines of data concentrate on only the following goods that Lowe's Sells on
   
 #### **NOTE**: The values of Prices (Discounted and Current) are dummy values. This had to be done due to inconsistencies.
   
-## Step 2 : Create a SQLite3 Database and Insert Scraped Data
+### Step 2 : Create a SQLite3 Database and Insert Scraped Data
 
 The motivation to choose SQLite3 is due to the fact that the list of products always increases, and we needed a mechanism to enable that products get added. Along with this, we felt the need for a querying mechanism. This is help us answer more advanced questions from the user. 
 
 Additionally, it seemed to match the requirements for an Open Source RDBMS as in the Rules, and had a vast community and good support.
 
-**[This]()** is the python scipt that enabled creation of the SQLite3 database. 
+**[This](https://github.com/Viswalahiri/Lowes_Campus_Hackathon/blob/master/Scripts/database_access.py)** is the python scipt that enabled creation of the SQLite3 database. 
 
 The **initial_data_dump_in_db()** was the responsible method.
 
 Good database practices were followed while CREATEing and INSERTing values into the database, such as making it SQL-injection proof.
 
-## Step 3 : Perform String Parsing on Individual Product Descriptions
+### Step 3 : Perform String Parsing on Individual Product Descriptions
+
+Each product description is parsed and is normalized by using regular expressions. 
+
+This is done to ensure that natural language processing happens with utmost ease.
+
+**For example:**
+
+A product that has a description
+```
+ "Samsung 24.52-cu ft Side-by-Side Refrigerator with Ice Maker (Stainless Steel)"
+
+```
+will become
+```
+22 23 24 25 26 Samsung cubic feet Side by Side Refrigerator with Ice Maker Stainless Steel
+```
+
+**[This]()** python script handles the string parsing on the product descriptions.
+
+The **parse_string()** function was the responsible method.
+
+### Step 4 : Generating Synsets for each stemmed / lemmatized string
+
+Each string in a product description is stemmed and then fed to a NLP based synset generator.
+
+A synset is a group of words that are similar to a given word. This is not contextualized.
+
+This synset can be used for a hash-table data-structure for fast retrieval of data.
+
+**[This]()** python script handles the both the stemming and synset generation of individual words in the parsed product descriptions.
+
+The **all_syno()**  method was the responsible method.
+
+### Step 5 : Create a hash-table data-structure
+
+For the efficient retrieval and verification of query strings, a hash-table is an ideal data structure.
+
+A garbage value that is guarenteed to have no adverse affects on the hash-table, is initially pushed into it.
+
+Soon after this, the hash-table is pickled (saved), as ```product_synonym_hash.pkl```.
+
+This ensures that it can be used further on.
+
+**[This]()** python script handles the creation of the hash-table.
+
+The **create_hash_map()**  method was the responsible method.
+
+### Step 6 : Update hash-table with all synsets of all processed product descriptions
+
+The pickled hash-table is loaded into the memory.
+
+Synsets of each string in the processed product description, are found and updated in the hash-table.
+
+Soon after this, the hash-table is pickled (saved), as ```product_synonym_hash.pkl```.
+
+This ensures that it can be used further on.
+
+**[This]()** python script handles the creation of the hash-table.
+
+The **update_hash_map()**  method was the responsible method.
 
 ## Prerequisites
 
