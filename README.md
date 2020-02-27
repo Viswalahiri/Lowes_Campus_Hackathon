@@ -1,19 +1,19 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 # Lowes_Campus_Hackathon
-## Solution to Problem Theme #2.
-## **Build a conversational solution that enables customers to discover and order products**
+### Solution to Problem Theme #2.
+### **Build a conversational solution that enables customers to discover and order products**
 
 This is a developmental project that acts as a solution to problem 2 of [this competition](https://www.techgig.com/hackathon/lowes-campus-hackathon).
 
-## Tools & Services Used
+# Tools & Services Used
 
 The various tools and services used include 
  - AWS Elastic Beanstalk
  - Google Dialogflow
  - Kommunicate
 
-## Steps of Development
+# Steps of Development
 
 ### Step 1 : Data Scraping
 
@@ -138,7 +138,7 @@ The **general_search()**  method was the responsible method.
 
 ### Step 9 : Ensure that Dialogflow bot has above API method present in Fulfillment, and data is recieved and displayed on iframe, or window.
 
-## Prerequisites
+# Prerequisites
 
 This package assumes you use Python 3.x. 
 
@@ -147,6 +147,13 @@ Expected package dependencies are listed in the "requirements.txt" file for PIP,
 pip install -r requirements.txt
 ```
 
+# Installation
+
+clone this repo
+
+To update database, run app.py in the Scripts folder, and insert values into template.
+
+To just use chatbot, open trial_indian_web.html
 
 ## Contributing
 
