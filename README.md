@@ -17,7 +17,7 @@ The various tools and services used include
 
 ### Step 1 : Data Scraping
 
-Approximately 100 rows of Product Data was scraped using this script that made use of Selenium.
+Approximately 100 rows of Product Data was scraped using a python script that made use of Selenium.
 
 **[This](https://github.com/Viswalahiri/Lowes_Campus_Hackathon/blob/master/Datasets/usable_data.csv)** is the csv file that was obtained after scraping the data.
 
@@ -39,6 +39,18 @@ These lines of data concentrate on only the following goods that Lowe's Sells on
 #### **NOTE**: The values of Prices (Discounted and Current) are dummy values. This had to be done due to inconsistencies.
   
 ## Step 2 : Create a SQLite3 Database and Insert Scraped Data
+
+The motivation to choose SQLite3 is due to the fact that the list of products always increases, and we needed a mechanism to enable that products get added. Along with this, we felt the need for a querying mechanism. This is help us answer more advanced questions from the user. 
+
+Additionally, it seemed to match the requirements for an Open Source RDBMS as in the Rules, and had a vast community and good support.
+
+**[This]()** is the python scipt that enabled creation of the SQLite3 database. 
+
+The **initial_data_dump_in_db()** was the responsible method.
+
+Good database practices were followed while CREATEing and INSERTing values into the database, such as making it SQL-injection proof.
+
+## Step 3 : Perform String Parsing on Individual Product Descriptions
 
 ## Prerequisites
 
