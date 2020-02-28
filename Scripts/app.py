@@ -38,20 +38,21 @@ def general_search():
 
 	# query = "smart wifi enabled black drier"
 	conn = sqlite3.connect('inventory.db')
-	print(access_hash_map(query))
+	# print(access_hash_map(query))
 	c = conn.cursor()
 	m = []
 	for i in access_hash_map(query):
 		c.execute(" SELECT website_link,asset_link,product_description,is_price,star_rating FROM inventory WHERE product_number={0}".format(i[1]))
 		m.append(c.fetchall())
-	main_json =[]
+	main_json ={}
+	count = 0
 	for i in m:
 		for j in i:
 			my_json_string = {'website_link': j[0], 'asset_link': j[1],'product_description':j[2], 'now_price':str(int(j[3])), 'ratings':str(j[4])}
-		main_json.append(my_json_string)
+			count+=1
+		main_json['Product_'+str(count)] = my_json_string
 	serialized= json.dumps(main_json, sort_keys=True, indent=3)
-#	print(serialized) 
-#	return serialized
-
+	return serialized
+	
 if __name__ == "__main__":
     app.run(debug=True)
