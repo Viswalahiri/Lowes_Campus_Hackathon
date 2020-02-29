@@ -9,7 +9,7 @@ This is a developmental project that acts as a solution to problem 2 of [this co
 # Tools & Services Used
 
 The various tools and services used include 
- - AWS Elastic Beanstalk
+ - PythonAnywhere
  - Google Dialogflow
  - Kommunicate
 
