@@ -1,13 +1,27 @@
-#data scraping from Lowe's Website
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""database_access.py: Data scraping from Lowe's Website."""
+
+__author__ = "Viswalahiri Swamy Hejeebu"
+__credits__ = ["Viswalahiri Swamy Hejeebu"]
+__license__ = "MIT"
+__version__ = "0.1.0"
+__maintainer__ = "Viswalahiri Swamy Hejeebu"
+__email__ = 'viswalahiriswamyh@gmail.com'
+__status__ = 'Dev'
+
+
 import csv
 import os
+
 import selenium
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select, WebDriverWait
+
 
 # core logic and statements to print out various elements on the lowes site
 # web is list of website links
@@ -37,9 +51,9 @@ def show_me_the_money(web):
                 #then price
             print(driver.find_element_by_xpath('/html/body/div[1]/div/div[3]/div/section[1]/div[3]/div[2]/div[1]/div[1]/span[3]').text)
             driver.close()
-    except :
-        print("Error")
-        pass
+        except :
+            print("Error")
+            pass
 # returns length of file (number of lines)
 def file_len(fname):
     with open(fname) as f:
