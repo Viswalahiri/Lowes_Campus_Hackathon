@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Database Updation Portal</title> 
+  <link rel="stylesheet" href="../static/css/style.css">  
+  </head>
+  <meta name="viewport" content="width=550; user-scalable=0;" />
+ <div class="login">
+  <h1>Enter Product Details</h1>
+    <form action="{{ url_for('update_db')}}"method="post">
+      <input type="text" name="website_link" placeholder="Website Link" required="required" />
+      <input type="text" name="product_id" placeholder="Product Id, e.g, 651482" required="required" />
+      <input type="text" name="model_number" placeholder="Model Number e.g, KSGG700ESS" required="required" />
+      <input type="text" name="rating" placeholder="Rating e.g, 4.2" required="required" />      
+      <input type="text" name="recommendation" placeholder="Percentage of recommendation e.g, 87%" required="required" />      
+      <input type="text" name="asset_link" placeholder="Link of static asset (image of product)" required="required" />      
+      <input type="text" name="brand" placeholder="Brand e.g, Samsung" required="required" />      
+      <input type="text" name="product_description" placeholder="Product Description" required="required" />
+      <input type="text" name="was_price" placeholder="Enter non-discounted price, e.g, 4000" required="required" />      
+      <input type="text" name="is_price" placeholder="Enter discounted price, e.g, 3500" required="required" /> 
+      <button style="margin-left: 100px;" type="submit" class="btn btn-primary btn-block btn-large">Update</button>
+    </form>
+   <br>
+   <br>
+   <strong style="text-align: center; margin-left: 145px;">{{confirmation_text}}</strong>
+    <br>
+ </div>
+</body>
+</html>
