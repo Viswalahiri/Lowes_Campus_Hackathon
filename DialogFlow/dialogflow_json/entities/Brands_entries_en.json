@@ -1,0 +1,110 @@
+[
+  {
+    "value": "Samsung",
+    "synonyms": [
+      "Samsung",
+      "Sam Sung"
+    ]
+  },
+  {
+    "value": "LG",
+    "synonyms": [
+      "LG",
+      "Life\u0027s Good",
+      "lifes good"
+    ]
+  },
+  {
+    "value": "Haier",
+    "synonyms": [
+      "Haier",
+      "Hiaer",
+      "Heir"
+    ]
+  },
+  {
+    "value": "Frigidaire",
+    "synonyms": [
+      "Frigidaire",
+      "Frigid Air"
+    ]
+  },
+  {
+    "value": "Whirlpool",
+    "synonyms": [
+      "Whirlpool",
+      "Whirl Pool"
+    ]
+  },
+  {
+    "value": "GE",
+    "synonyms": [
+      "GE",
+      "General Electrics"
+    ]
+  },
+  {
+    "value": "Maytag",
+    "synonyms": [
+      "Maytag",
+      "May tag"
+    ]
+  },
+  {
+    "value": "KitchenAid",
+    "synonyms": [
+      "KitchenAid",
+      "Kitchen Aid"
+    ]
+  },
+  {
+    "value": "Holiday",
+    "synonyms": [
+      "Holiday",
+      "holyday"
+    ]
+  },
+  {
+    "value": "Roper",
+    "synonyms": [
+      "Roper"
+    ]
+  },
+  {
+    "value": "Sharp",
+    "synonyms": [
+      "Sharp"
+    ]
+  },
+  {
+    "value": "Allen",
+    "synonyms": [
+      "Allen",
+      "Roth",
+      "Allen+Roth"
+    ]
+  },
+  {
+    "value": "Bosch",
+    "synonyms": [
+      "Bosch",
+      "Boch"
+    ]
+  },
+  {
+    "value": "Mohawk",
+    "synonyms": [
+      "Mohawk",
+      "mohawk",
+      "mo hawk"
+    ]
+  },
+  {
+    "value": "Apache_Hills",
+    "synonyms": [
+      "Apache_Hills",
+      "apache hills",
+      "apachi hills"
+    ]
+  }
+]

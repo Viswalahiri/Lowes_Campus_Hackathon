@@ -1,0 +1,9 @@
+{
+  "id": "c38263a1-4ae0-4ce1-b763-7ba4c0d8fa89",
+  "name": "Brands",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": true
+}

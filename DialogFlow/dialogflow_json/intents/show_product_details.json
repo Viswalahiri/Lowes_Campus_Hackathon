@@ -1,0 +1,69 @@
+{
+  "id": "2eab8ca1-79bd-4bb4-ba05-51ded9991a1d",
+  "name": "show_product_details",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "9e641440-1f34-4b63-8f1c-1107916dffc8",
+          "required": false,
+          "dataType": "@sys.color",
+          "name": "color",
+          "value": "$color",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "19347cd2-df73-4f67-bd3d-4079fa08c079",
+          "required": true,
+          "dataType": "@Appliances",
+          "name": "appliances",
+          "value": "$appliances",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "defaultValue": "Is there a specific appliance you are searching for?",
+          "isList": false
+        },
+        {
+          "id": "31d53bbd-f524-4af2-8c61-8aa9ab973975",
+          "required": false,
+          "dataType": "@Brands",
+          "name": "brands",
+          "value": "$brands",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

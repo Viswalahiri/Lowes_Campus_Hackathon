@@ -1,0 +1,65 @@
+[
+  {
+    "value": "refrigerator",
+    "synonyms": [
+      "refrigerator",
+      "fridge",
+      "electric refrigerator",
+      "freezer",
+      "chiller",
+      "cooler",
+      "icebox",
+      "ice box",
+      "cold storage",
+      "ice chest"
+    ]
+  },
+  {
+    "value": "oven",
+    "synonyms": [
+      "oven",
+      "stove",
+      "single oven",
+      "range",
+      "oven range",
+      "kiln",
+      "roaster"
+    ]
+  },
+  {
+    "value": "dishwasher",
+    "synonyms": [
+      "dishwasher",
+      "dish washer",
+      "dish washing machine",
+      "dishwashing machine"
+    ]
+  },
+  {
+    "value": "washing_machine",
+    "synonyms": [
+      "washer",
+      "washing machine",
+      "laundry machine",
+      "laundry",
+      "clothes washer",
+      "washer machine"
+    ]
+  },
+  {
+    "value": "dryer",
+    "synonyms": [
+      "dryer",
+      "drier",
+      "clothes dryer",
+      "clothes drier"
+    ]
+  },
+  {
+    "value": "microwave",
+    "synonyms": [
+      "microwave",
+      "microwave oven"
+    ]
+  }
+]
