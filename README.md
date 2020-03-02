@@ -1,7 +1,13 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 # Lowes_Campus_Hackathon
-### Solution to Problem Theme #2. API and Database Interaction Portal Hosted [here](http://lowescampushackathon.pythonanywhere.com/)
+### Solution to Problem Theme #2. 
+
+#### API Interaction Portal Hosted [here](http://lowescampushackathon.pythonanywhere.com/general_search/insert+search+keywords)
+#### Database Interaction Portal Hosted [here](http://lowescampushackathon.pythonanywhere.com/)
+#### Demo Webiste Integration hosted [here](http://lowescampushackathon.pythonanywhere.com/demo)
+
+
 ### **Build a conversational solution that enables customers to discover and order products**
 
 This is a developmental project that acts as a solution to problem 2 of [this competition](https://www.techgig.com/hackathon/lowes-campus-hackathon).
