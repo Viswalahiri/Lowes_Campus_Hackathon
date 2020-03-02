@@ -7,7 +7,8 @@
 #### API Interaction Portal Hosted [here](http://lowescampushackathon.pythonanywhere.com/general_search/insert+search+keywords)
 #### Database Interaction Portal Hosted [here](http://lowescampushackathon.pythonanywhere.com/)
 #### Demo Webiste Integration hosted [here](http://lowescampushackathon.pythonanywhere.com/demo)
-
+#### Product Idea Video present [here](bit.ly/loweshack)
+#### Product Prototype Video Present [here](bit.ly/loweshack1)
 
 
 This is a developmental project that acts as a solution to problem 2 of [this competition](https://www.techgig.com/hackathon/lowes-campus-hackathon).
