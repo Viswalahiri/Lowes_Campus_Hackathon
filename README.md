@@ -155,11 +155,21 @@ pip install -r requirements.txt
 
 # Installation
 
-clone this repo
+1. clone this repo
 
-To update database, run app.py in the Scripts folder, and insert values into template.
+2. install requirements from requirements.txt
 
-To just use chatbot, open trial_indian_web.html
+3. pip install nltk.downkload('wordnet')
+
+4. Grant permission for SQLite3 Database access 
+
+5. To update database, run app.py in the Scripts folder, and insert values into template.
+
+6. Go to localhost (127.0.0.1)
+
+7. To access API go to (127.0.0.1/general_search)
+
+8. To just use chatbot, go to 127.0.0.1/demo
 
 ## Contributing
 
