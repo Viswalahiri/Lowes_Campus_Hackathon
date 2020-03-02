@@ -14,8 +14,6 @@ __status__ = 'Dev'
 
 import importlib
 import json
-import os
-from os import path
 import sqlite3
 import subprocess
 
@@ -35,10 +33,8 @@ def home():
 
 @app.route("/update_db",methods = ['POST'])
 def update_db():
-	website_link, product_number, model_number, star_rating, recommendation_chance,asset_link,brand_name, product_description, was_price, is_price, dummy = [str(x) for x in request.form.values()]
-	THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
-	inventory_ = os.path.join(THIS_FOLDER, 'inventory.db')
-	conn = sqlite3.connect(inventory_)
+	website_link, product_number, model_number, star_rating, recommendation_chance,asset_link,brand_name, product_description, was_price, is_price,dummy = [str(x) for x in request.form.values()]
+	conn = sqlite3.connect('database/inventory.db')
 	c = conn.cursor()
 	c.execute("SELECT product_number FROM inventory WHERE product_number = ?",(product_number,))
 	try:
@@ -48,18 +44,16 @@ def update_db():
 			dynamic_data_dump(product_number,product_description)
 			return render_template('index.html', confirmation_text = 'Details have been uploaded.')
 		else:
-			return render_template('index.html', confirmation_text = 'Duplicate detected.')
+			return render_template('index.html', confirmation_text = 'Duplicate detected.')		
 	except:
-		return render_template('index.html', confirmation_text = 'Error.')
+		return render_template('index.html', confirmation_text = 'Error.')				
 		pass
 
 
 @app.route("/general_search/<string:n_query>",methods = ['GET'])
 def general_search(n_query):
 	query = ' '.join(n_query.split('%'))
-	THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
-	inventory_ = os.path.join(THIS_FOLDER, 'inventory.db')
-	conn = sqlite3.connect(inventory_)
+	conn = sqlite3.connect('database/inventory.db')
 	c = conn.cursor()
 	m = []
 	for i in access_hash_map(query):
